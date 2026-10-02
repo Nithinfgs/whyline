@@ -115,7 +115,7 @@ export function promptText(entry) {
   } else {
     return null;
   }
-  text = text.replace(NOISE_BLOCKS, '').trim();
+  text = text.replace(NOISE_BLOCKS, '').replace(/<\/?pasted_content[^>]*>/g, '').trim();
   if (!text || text.startsWith('[Request interrupted')) return null;
   return text;
 }
