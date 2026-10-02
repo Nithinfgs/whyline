@@ -10,7 +10,7 @@ Trace any line of code back to the coding-agent session that wrote it, using the
   <img alt="Zero runtime dependencies" src="https://img.shields.io/badge/runtime%20deps-0-informational.svg">
 </p>
 
-<p align="center"><img src="docs/assets/demo.svg" alt="whyline output: a provenance map of src/retry.js with one letter per agent session, then the prompt behind line 15" width="860"></p>
+<p align="center"><img src="docs/assets/demo.svg" alt="whyline output: a provenance map of src/retry.js with one letter per agent session, then the prompt behind line 15" width="860"><br><sub>Real output of <code>whyline --demo</code> on a generated sample repo (3 agent sessions and one human edit).</sub></p>
 
 ## In 20 seconds
 
