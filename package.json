@@ -1,0 +1,52 @@
+{
+  "name": "whyline",
+  "version": "0.1.0",
+  "description": "Which agent prompt wrote this line? git blame for AI-assisted code, built from the coding-agent transcripts already on your disk.",
+  "keywords": [
+    "git",
+    "blame",
+    "claude-code",
+    "ai-agents",
+    "provenance",
+    "developer-tools",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Nithinfgs",
+  "homepage": "https://github.com/Nithinfgs/whyline#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nithinfgs/whyline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nithinfgs/whyline/issues"
+  },
+  "type": "module",
+  "bin": {
+    "whyline": "bin/whyline.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm test",
+    "demo": "node bin/whyline.js --demo",
+    "render-demo": "node scripts/render-demo.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "typescript": "^5.6.0"
+  }
+}
