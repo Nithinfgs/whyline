@@ -16,6 +16,7 @@ test('promptText keeps human prompts and drops tool output and injected context'
   assert.equal(promptText({ type: 'user', isSidechain: true, message: { content: 'subagent task' } }), null);
   assert.equal(promptText({ type: 'user', message: { content: '<system-reminder>ctx</system-reminder>' } }), null);
   assert.equal(promptText({ type: 'user', message: { content: [{ type: 'text', text: '<system-reminder>ctx</system-reminder>\nadd tests' }] } }), 'add tests');
+  assert.equal(promptText({ type: 'user', message: { content: '<pasted_content id="x1">fix it</pasted_content id="x1">' } }), 'fix it');
   assert.equal(promptText({ type: 'user', message: { content: '[Request interrupted by user]' } }), null);
 });
 

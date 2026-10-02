@@ -91,7 +91,7 @@ export function renderFileMap(report, { style, width, summaryOnly }) {
   if (legend.length === 0) {
     out.push(style.yellow(noMatchHint(report, nonBlank)));
   } else if (untraced > 0) {
-    out.push(style.dim(`${style.dim('·')} no transcript edit matches these lines: written by hand, by another tool, or in a session whose transcript is gone`));
+    out.push(style.dim(`${style.dim('·')} no transcript edit matches: typed by hand, another tool, or transcript gone`));
   }
   return out.join('\n');
 }
