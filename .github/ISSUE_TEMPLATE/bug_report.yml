@@ -1,0 +1,28 @@
+name: Wrong or missing attribution
+description: A line was traced to the wrong session, or should have been traced and wasn't
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please **do not paste real transcripts or private prompts**. A minimal synthetic reproduction (see `src/demo.js`) is ideal.
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what did whyline show?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The relevant edit(s) from the transcript (file, old/new text), the git history, and the command you ran. Remove secrets.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: whyline version, Node version, OS
+      placeholder: "0.1.0, node 22.3, macOS 15"
+    validations:
+      required: true
