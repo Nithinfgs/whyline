@@ -1,0 +1,19 @@
+name: Feature or agent adapter request
+description: Suggest an improvement, or ask for support for another coding agent
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like whyline to do?
+  - type: textarea
+    id: format
+    attributes:
+      label: For a new agent, where do its logs live and what do edit events look like?
+      description: Paths and a redacted sample line are enough.
